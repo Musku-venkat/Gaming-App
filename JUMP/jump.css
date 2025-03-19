@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#game{
+    width: 600px;
+    height: 300px;
+    border: 1px solid;
+    margin: 50px auto;
+    background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-chinese-style-landscape-background-landscape-landscape-painting-picture-image_938474.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+
+#dino{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 210px;
+    background-image: url("https://cdn.iconscout.com/icon/premium/png-256-thumb/dilophosaurus-2179502-1826355.png?f=webp");
+    background-size: cover;
+}
+
+.animate-jump{
+    animation: jump 1s linear;
+}
+
+@keyframes jump {
+    0%{top: 210px;}
+    40%{top: 150px;}
+    60%{top: 150px;}
+    100%{top: 210px;}
+}
+
+#rock{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 160px;
+    left: 555px;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/049/379/217/small_2x/a-retro-styled-pixel-art-illustration-of-a-sharp-gray-rock-with-many-edges-and-bumps-png.png");
+    background-size: cover;
+}
+
+.animate-rock{
+    animation: rock 2s infinite linear;
+}
+
+@keyframes rock {
+    0%{left: 555px;}
+    100%{left: -40px;}
+}
+
+#score{
+    position: relative;
+    bottom: 110px;
+    left: 90px;
+}
+button{
+    padding: 10px 20px;
+
+}

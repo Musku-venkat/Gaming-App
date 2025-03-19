@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gaming App</title>
+        <link rel="icon" href="./Images/icon.avif" type="image/png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+    
+    <body>
+        <nav class="navbar border border-3 rounded-2 m-4">
+            <div class="container-fluid">
+                <a class="navbar-brand text-primary text-center" href="./Product.html"><img src="./Images/icon.avif" width="40px" height="40px" alt="Logo"></a>
+                <!-- <div class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">HOME</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#content">Content</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#about">About Us</a>
+                </div> -->
+                <!-- <form class="d-flex" role="search">
+                    <input type="search" class="form-control me-2" placeholder="Search" aria-label="search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form> -->
+                <div class="nav-item">
+                    <button class="btn btn-danger" id="logoutBtn">Log Out</button>
+                </div>
+            </div>
+        </nav>
+        <div class="border border-3 rounded-2 m-4 p-2 d-flex justify-content-around flex-wrap">
+            <div class="card p-2 m-2" style="width: 18rem;">
+                <img src="https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/9afd3b92ab41ffca7f368a8fcbd6d39a75894efe0edbc14cf1f067cf625e6678.png" class="card-img-top border" alt="Jumping Game">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-2">Jumping Game</h5>
+                    <p class="card-text">A "Dragon Jump" game typically refers to a game where you must jump up to spear by timing their jumps precisely, aiming to avoid being hit by the dragons while achieving high scores.</p>
+                    <a href="./JUMP/Jump.html" class="btn btn-primary px-4 py-2">Play</a>
+                </div>
+            </div>
+            <div class="card p-2 m-2" style="width: 18rem;">
+                <img src="https://www.codester.com/static/uploads/items/000/020/20745/preview/004.jpg" class="card-img-top" alt="Flapping ball">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-2">Flapping Ball</h5>
+                    <p class="card-text">The premise of Flappy Bird's endless runner game is simple: Tap the screen to navigate an 8-bit bird character named Faby through the gaps between green pipes without hitting them..</p>
+                    <a href="./BIRD/Bird.html" class="btn btn-primary px-4 py-2">Play</a>
+                </div>
+            </div>
+            <div class="card p-2 m-2" style="width: 18rem;">
+                <img src="https://t4.ftcdn.net/jpg/07/11/95/05/360_F_711950540_17IHHEPz3bW00kxb3oBAm2x63XwqbAAt.jpg" class="card-img-top" alt="Snake Game">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-2">Snake Game</h5>
+                    <p class="card-text">Snake is a video games where the player maneuvers a growing as a snake. The player must keep the snake from colliding with obstacles and itself, which gets harder as the snake lengthens.</p>
+                    <a href="./SNAKE/Snake.html" class="btn btn-primary px-4 py-2">Play</a>
+                </div>
+            </div>
+            <div class="card p-2 m-2" style="width: 18rem;">
+                <img src="https://cdn-icons-png.flaticon.com/512/7879/7879640.png" class="card-img-top" alt="Tic-Tac-Toe">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-2">Tic-Tac-Toe</h5>
+                    <p class="card-text">The game is played on a grid. You are X , your friend is O . Players take turns putting their marks in empty squares. The first player to get 3 of her marks in a row is the winner.</p>
+                    <a href="./TIC-TAC/Tic-tac.html" class="btn btn-primary px-4 py-2">Play</a>
+                </div>
+            </div>
+            <div class="card p-2 m-2" style="width : 18rem;" id="container-1">
+                <img src="https://i.pinimg.com/736x/38/20/5b/38205bc079ff50b37439a97c7f19d3f4.jpg" class="card-img-top"
+                    alt="Ludo">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-2">Ludo</h5>
+                    <p class="card-text">Ludo is a strategy board game where players race their tokens around a board using a single die. It's a popular game for children and can be played with two to four players. </p>
+                    <a href="#" class="btn btn-primary px-4 py-2">Play</a>
+                </div>
+            </div>
+            <div class="card p-2 m-2" style="width: 18rem;">
+                <img src="https://play-lh.googleusercontent.com/stjTItfEyoYW6XankxkYMzHl29ydCcWs-iA-jMXsEmQr9or8GmJw0Cdyyh02aoY47mWv=w240-h480-rw" class="card-img-top" alt="Sudoku">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-2">Sudoku</h5>
+                    <p class="card-text">Sudoku is a logic-based puzzle that involves filling a 9x9 grid with the numbers 1-9. The goal is to make sure that each row, column, and 3x3 box contains every number exactly once.</p>
+                    <a href="./Jump.html" class="btn btn-primary px-4 py-2">Play</a>
+                </div>
+            </div>
+            <!-- <div class="card p-2 m-2" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-2">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary px-4 py-2">Play</a>
+                </div>
+            </div> -->
+        </div>
+    </body>
+    <script type="module">
+                import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
+        import { getFirestore, getDoc, doc} from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAF67FucZE2ziExqX9O-Dile19gJguY_uM",
+            authDomain: "gaming-app-eff22.firebaseapp.com",
+            projectId: "gaming-app-eff22",
+            storageBucket: "gaming-app-eff22.firebasestorage.app",
+            messagingSenderId: "891163282279",
+            appId: "1:891163282279:web:75d3c3ffaed30b134e3dc2"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth();
+        const db = getFirestore();
+
+        const logoutBtn = document.getElementById('logoutBtn');
+        logoutBtn.addEventListener('clock', (event)=>{
+            localStorage.removeItem('loggedInUserId');
+            signOut(auth)
+            .then(()=>{
+                window.location.href = './index.html';
+            })
+            .catch((err)=>{
+                console.error(err);
+            })
+        })
+    </script>
+</html>
