@@ -9,13 +9,13 @@
     </head>
     <body style="background-image: url('https://img.freepik.com/premium-vector/retro-vibe-doodle-pattern-video-game-hand-drawn-doodle-seamless-pattern-tetris-console-dialog-cloud-video-element-enter-computer-retro-arcade-play-background-wallpaper-pattern-vector-illustration_685689-265.jpg');">
         <form action="./Product.html" class="d-flex align-items-center justify-content-center vh-100">
-            <div class="d-flex flex-column align-items-center border border-black border-2 rounded-4 p-5" style="box-shadow: 5px 5px 5px black;">
+            <div class="d-flex flex-column align-items-center border border-black border-2 rounded-4 p-5 position-relative" style="box-shadow: 5px 5px 5px black;">
                 <h2>Login Form</h2>
-                <div id="messageDiv" class="bg-primary text-white px-2 py-3 m-2 rounded-2" style="display: none;"></div>
+                <div id="messageDiv" class="bg-primary text-white px-2 py-2 m-2 rounded-2 position-absolute" style="display: none;"></div>
                 <br>
 
                 <div class="form-floating mb-2">
-                    <input type="text" id="email" name="email" class="form-control border-black" placeholder="Enter Email"  pattern="[a-z\d]+@(gmail)+\.(com)" title="End's with @gmail.com" required>
+                    <input type="email" id="email" name="email" class="form-control border-black" placeholder="Enter Email"  pattern="[a-z\d]+@(gmail)+\.(com)" title="End's with @gmail.com" required>
                     <label for="email"><b>Email address</b></label>
                     <br>
                 </div>
@@ -27,7 +27,7 @@
                 </div> -->
     
                 <div class="form-floating mb-2">
-                    <input type="text" id="password" name="password" class="form-control border-black" placeholder="Enter Password" required>
+                    <input type="password" id="password" name="password" class="form-control border-black" placeholder="Enter Password" required>
                     <label for="password"><b>Password</b></label>
                     <div id="password" class="form-text">
                         Must have <b>8-16</b> characters 
