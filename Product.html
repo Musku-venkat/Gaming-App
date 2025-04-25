@@ -9,31 +9,86 @@
         <link rel="icon" href="./Images/icon.avif" type="image/png">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     </head>
     
     <body>
-        <nav class="navbar border border-3 rounded-2 m-4">
+        <nav class="navbar border border-3 m-2">
             <div class="container-fluid">
                 <a class="navbar-brand text-primary text-center" href="./Product.html"><img src="./Images/icon.avif" width="40px" height="40px" alt="Logo"></a>
-                <!-- <div class="nav-item">
+                <div class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#home">HOME</a>
                 </div>
                 <div class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#content">Content</a>
+                    <a class="nav-link" aria-current="page" href="#content">Content</a>
                 </div>
                 <div class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#about">About Us</a>
-                </div> -->
-                <!-- <form class="d-flex" role="search">
+                    <a class="nav-link" aria-current="page" href="#about">About Us</a>
+                </div>
+                <form class="d-flex" role="search">
                     <input type="search" class="form-control me-2" placeholder="Search" aria-label="search">
                     <button class="btn btn-outline-primary" type="submit">Search</button>
-                </form> -->
+                </form>
                 <div class="nav-item">
                     <button class="btn btn-danger" id="logoutBtn">Log Out</button>
                 </div>
             </div>
         </nav>
-        <div class="border border-3 rounded-2 m-4 p-2 d-flex justify-content-around flex-wrap">
+        <div id="carouselExampleCaptions" class="carousel slide m-2">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://www.codester.com/static/uploads/items/000/020/20745/preview/004.jpg" class="d-block w-100" height="800px" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Flapping Ball</h5>
+                  <p>The premise of Flappy Bird's endless runner game...</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://t4.ftcdn.net/jpg/07/11/95/05/360_F_711950540_17IHHEPz3bW00kxb3oBAm2x63XwqbAAt.jpg" class="d-block w-100" height="800px" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Snake Game</h5>
+                  <p>Snake is a video games where the player maneuvers a growing as a snake...</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/7879/7879640.png" class="d-block w-100" height="800px" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Tic-Tac-Toe</h5>
+                  <p>The game is played on a grid. You are X , your friend is O...</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/38/20/5b/38205bc079ff50b37439a97c7f19d3f4.jpg" class="d-block w-100" height="800px" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Ludo</h5>
+                  <p>Ludo is a strategy board game where players race their tokens around a board using a single die...</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://play-lh.googleusercontent.com/stjTItfEyoYW6XankxkYMzHl29ydCcWs-iA-jMXsEmQr9or8GmJw0Cdyyh02aoY47mWv=w240-h480-rw" class="d-block w-100" height="800px" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Sudoku</h5>
+                  <p>Sudoku is a logic-based puzzle that involves filling a 9x9 grid with the numbers 1-9...</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <div class="border border-3 m-2 p-2 d-flex justify-content-around flex-wrap">
             <div class="card p-2 m-2" style="width: 18rem;">
                 <img src="https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/9afd3b92ab41ffca7f368a8fcbd6d39a75894efe0edbc14cf1f067cf625e6678.png" class="card-img-top border" alt="Jumping Game">
                 <div class="card-body text-center">
