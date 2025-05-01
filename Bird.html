@@ -12,10 +12,15 @@
                 background: linear-gradient(225deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url('https://www.angrybirds.com/wp-content/uploads/2022/05/AB_RELOADED_202103_16x9_KeyArt_FlatPieces-1300x731.jpg') no-repeat;
                 background-size: cover;
                 background-position: center;
-                text-align: center;
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                justify-content: center;
+            }
+            #inner{
                 display: flex;
                 flex-direction: column;
-                gap: 10px;
+                gap: 20px;
                 align-items: center;
                 justify-content: center;
                 color: white;
@@ -24,12 +29,18 @@
     </head>
     <body>
         <div class="m-1" id="image">
-            <div class="text-opacity-100 z-1">
-                <div>1</div>
-                <div>3</div>
-                <div>5</div>
+            <div id="inner" class="text-opacity-100 z-1">
+                <h1>Flapping Bird</h1>
+                <h2>How to Play?</h2>
+                <div class="text-center">
+                    <h5> For Start the game "Press Enter".</h5>
+                    <h5> For Flapping the bird "Press Spacebar or Upward arrow or X".</h5>
+                </div>
                 <button class="btn btn-primary px-4">
                     <a href="./BIRD/Bird.html" class="text-decoration-none text-white">Play</a>
+                </button>
+                <button class="btn btn-warning px-4">
+                    <a href="#" class="text-decoration-none text-white">Scoreboard</a>
                 </button>
             </div>
         </div>

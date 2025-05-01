@@ -3,9 +3,46 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jumping Game</title>
+        <title>Jump Game</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <style>
+            #image{
+                height: 720px;
+                width: 99.50%;
+                background: linear-gradient(225deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2)), url('https://cdn2.unrealengine.com/unreal-engine-instinction-feed-1-1920x1080-a0f7cfcac7b9.jpg?resize=1&w=1920') no-repeat;
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                justify-content: center;
+            }
+            #inner{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+                justify-content: center;
+                color: white;
+            }
+        </style>
     </head>
     <body>
-        <div></div>
+        <div class="m-1" id="image">
+            <div id="inner" class="text-opacity-100 z-1">
+                <h1>Jumping Game</h1>
+                <h2>How to Play?</h2>
+                <div class="text-center">
+                    <h5> For Start the game "Press Start Button" on the screen.</h5>
+                    <h5> For Dino to jump "Press any whwere on viewport".</h5>
+                </div>
+                <button class="btn btn-primary px-4">
+                    <a href="./JUMp/Jump.html" class="text-decoration-none text-white">Play</a>
+                </button>
+                <button class="btn btn-warning px-4">
+                    <a href="#" class="text-decoration-none text-white">Scoreboard</a>
+                </button>
+            </div>
+        </div>
     </body>
 </html>
