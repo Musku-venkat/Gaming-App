@@ -17,6 +17,11 @@
                 align-items: center;
                 justify-content: center;
             }
+            #bread{
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }
             #inner{
                 display: flex;
                 flex-direction: column;
@@ -29,6 +34,12 @@
     </head>
     <body>
         <div class="m-1" id="image">
+            <nav id="bread" col style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="./Product.html">Home</a></li>
+                  <li class="breadcrumb-item active text-white" aria-current="page">Library</li>
+                </ol>
+            </nav>
             <div id="inner" class="text-opacity-100 z-1">
                 <h1>Snake Game</h1>
                 <h2>How to Play?</h2>
