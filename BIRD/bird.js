@@ -37,7 +37,7 @@ let gravity = 0.4;
 let game_over = false;
 let score = 0;
 
-function start() {
+window.onload = function () {
     board = document.getElementById('board');
     board.width = board_width;
     board.height = board_height;
@@ -182,24 +182,4 @@ function reset_game(event){
             game_over = false;
         }
     }
-}
-
-window.onload = function(){
-    board = document.getElementById('board');
-    board.width = board_width;
-    board.height = board_height;
-    context = board.getContext('2d');
-
-    //load images
-    bird_image = new Image();
-    bird_image.src = './Images/bird.gif';
-    bird_image.onload = function (){
-        context.drawImage(bird_image, bird.x, bird.y, bird.width, bird.height);
-    }
-
-    top_pipe_img = new Image();
-    top_pipe_img.src = './Images/toppipe.png';
-
-    bottom_pipe_img = new Image();
-    bottom_pipe_img.src = './Images/toppipe.png';
 }
