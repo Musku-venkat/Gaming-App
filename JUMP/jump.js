@@ -1,7 +1,10 @@
 let dino = document.getElementById('dino');
 let rock = document.getElementById('rock');
 let score = document.getElementById('score');
+let isGameRunning = false;
 let count = 0;
+
+window.addEventListener('Spacebar', jump);
 
 function jump() {
     if (!dino.classList.contains('animate-jump')) {
@@ -12,7 +15,17 @@ function jump() {
     }
 }
 
+document.addEventListener('keydown', function(event) {
+    if (event.code === 'Space') {
+        jump();
+    }
+});
+
+
 function start() {
+    if (isGameRunning) return; // prevent multiple starts
+    isGameRunning = true;
+
     count = 0;
     score.innerHTML = `Score : ${count}`;
     rock.classList.add('animate-rock');
@@ -21,12 +34,18 @@ function start() {
         let dino_top = parseInt(window.getComputedStyle(dino).getPropertyValue('top'));
         let rock_left = parseInt(window.getComputedStyle(rock).getPropertyValue('left'));
 
-        if (rock_left < 70 && rock_left > 0 && dino_top > 200) {
+        let isCollision = rock_left < 70 && rock_left > 0 && dino_top > 200;
+
+        if (isCollision) {
             rock.classList.remove('animate-rock');
-            alert(`Game Over\nScore: ${count}`);
             clearInterval(gameLoop);
-        } else {
-            score.innerHTML = `Score : ${count++}`;
+            isGameRunning = false; // allow restart
+            alert(`Game Over\nScore: ${count}`);
+            return;
         }
+
+        count++;
+        score.innerHTML = `Score : ${count}`;
+
     }, 100);
 }

@@ -62,7 +62,7 @@
 #score{
     position: relative;
     bottom: 110px;
-    left: 90px;
+    left: -200px;
 }
 button{
     padding: 10px 20px;
