@@ -37,6 +37,7 @@ let gravity = 0.25;
 let game_over = true; // start game as not running
 let score = 0;
 let highscore = parseInt(localStorage.getItem("flappyHighscore")) || 0;
+let animationId;
 
 window.onload = function () {
   board = document.getElementById("board");
@@ -66,17 +67,22 @@ function startGame() {
   score = 0;
   game_over = false;
 
-  requestAnimationFrame(update);
+  cancelAnimationFrame(animationId);
+
+  animationId = requestAnimationFrame(update);
+
+  clearInterval(pipeInterval)
   pipeInterval = setInterval(place_pipes, 1500);
 }
 
 function update() {
-  requestAnimationFrame(update);
   if (game_over) {
     clearInterval(pipeInterval);
     displayGameOver();
     return;
   }
+  
+  animationId = requestAnimationFrame(update);
 
   context.clearRect(0, 0, board.width, board.height);
 
