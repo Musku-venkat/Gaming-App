@@ -1,0 +1,57 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#bread{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.container{
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+}
+
+h1{
+    text-align: center;
+    margin: 40px;
+}
+
+.row{
+    height: 100px;
+    overflow: hidden;
+}
+
+.col{
+    height: 100px;
+    width: 100px;
+    float: left;
+    font-size: 100px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.border-b{
+    border-bottom: 5px solid;
+}
+
+.border-r{
+    border-right: 5px solid;
+}
+
+.col:hover{
+    background-color: #ccc;
+}
+
+.winner{
+    color: red;
+}
+
+button{
+    padding: 10px 20px;
+}
