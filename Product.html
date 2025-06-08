@@ -19,7 +19,29 @@
             }
             #big:hover{
                 transform: scale(1.05);
-                transition: 1s ease;
+               transition: 1s ease;
+            }
+            .d610-none {
+                display: none;
+            }
+            @media (max-width: 950px) {
+                #hover {
+                    display: none;
+                }
+            }
+            @media (max-width: 610px) {
+                .search-form, .logout {
+                    display: none !important;
+                }
+                #navbarContent .nav-links-group,
+                #navbarContent .search-form,
+                #navbarContent .logout-desktop {
+                    display: block;
+                    margin-top: 10px;
+                }
+                .d610-none {
+                    display: block !important;
+                }
             }
         </style>
     </head>
@@ -27,21 +49,37 @@
     <body>
         <nav class="navbar border border-3 m-2">
             <div class="container-fluid">
+                <button class="navbar-toggler d610-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <a style="font-weight: 500;" class="navbar-brand text-primary text-center text-black" href="./Product.html"><img src="./Images/icon.webp" width="60px" height="60px" alt="Logo">GameZone</a>
-                <!-- <div class="nav-item" id="hover">
-                    <a class="nav-link active" aria-current="page" href="#home">HOME</a>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <!-- Main nav links (hide above 950px) -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-links-group">
+                      <li class="nav-item"><a class="nav-link active" href="#carouselExampleInterval">Home</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#content">Content</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    </ul>
+                    <!-- Logout Button -->
+                    <div class="ms-2 logout-desktop">
+                      <a href="./index.html" class="btn btn-danger text-white text-decoration-none">Log Out</a>
+                    </div>
+                </div>
+                <div class="nav-item" id="hover">
+                    <a class="nav-link active" aria-current="page" href="#carouselExampleInterval">Home</a>
                 </div>
                 <div class="nav-item" id="hover">
                     <a class="nav-link" aria-current="page" href="#content">Content</a>
                 </div>
                 <div class="nav-item" id="hover">
                     <a class="nav-link" aria-current="page" href="#about">About Us</a>
-                </div> -->
-                <form class="d-flex" role="search">
-                    <input type="search" class="form-control me-2" placeholder="Search" aria-label="search">
+                </div>
+                <form class="d-flex search-form" role="search">
+                    <input id="searchInput" type="search" class="form-control me-2" placeholder="Search Games...." aria-label="search">
                     <button class="btn btn-outline-primary" type="submit">Search</button>
                 </form>
-                <div class="nav-item" id="hover">
+                <div class="nav-item logout">
                     <button class="btn btn-danger" id="logoutBtn"><a href="./index.html" class="text-white text-decoration-none">Log Out</a></button>
                 </div>
             </div>
@@ -108,7 +146,7 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-        <div class="border border-3 m-2 p-2 d-flex justify-content-around flex-wrap">
+        <div id="content" class="border border-3 m-2 p-2 d-flex justify-content-around flex-wrap">
             <div class="card p-2 m-2" style="width: 18rem; box-shadow: 3px 3px 3px grey;" id="big">
                 <img id="big" src="https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,f=auto/9afd3b92ab41ffca7f368a8fcbd6d39a75894efe0edbc14cf1f067cf625e6678.png" class="card-img-top border" alt="Jumping Game">
                 <div class="card-body text-center">
@@ -168,6 +206,45 @@
                 </div>
             </div> -->
         </div>
+        <footer id="about" class="bg-dark text-white mt-5 p-4">
+            <div class="container">
+                <div class="row">
+                    <!-- Brand -->
+                    <div class="col-md-4 mb-3">
+                        <h5 class="text-primary">GameZone</h5>
+                        <p>Your ultimate hub for fun and interactive web games. Dive in and play!</p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-md-4 mb-3">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="./Product.html" class="text-white text-decoration-none">Home</a></li>
+                            <li><a href="#content" class="text-white text-decoration-none">Content</a></li>
+                            <li><a href="#about" class="text-white text-decoration-none">About</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="col-md-4 mb-3">
+                      <h5>Contact Us</h5>
+                      <p><i class="bi bi-envelope"></i> support@gamezone.com</p>
+                      <p><i class="bi bi-telephone"></i> +91 98765 43210</p>
+                      <div>
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                      </div>
+                    </div>
+                </div>
+
+                <hr class="bg-white">
+                <div class="text-center">
+                  <p class="mb-0">&copy; 2025 GameZone. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
     </body>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
@@ -196,8 +273,28 @@
                 window.location.href = './index.html';
             })
             .catch((err)=>{
-                console.error(err);
+                console.error(err.message);
             })
         })
+        // Wait until DOM is ready
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.getElementById("searchInput");
+            const cards = document.querySelectorAll(".card");
+
+            searchInput.addEventListener("input", function () {
+                const query = searchInput.value.toLowerCase();
+
+                cards.forEach((card) => {
+                    const title = card.querySelector(".card-title").innerText.toLowerCase();
+                    const description = card.querySelector(".card-text").innerText.toLowerCase();
+
+                    if (title.includes(query) || description.includes(query)) {
+                        card.style.display = "block"; // Show matching card
+                    } else {
+                        card.style.display = "none"; // Hide non-matching card
+                    }
+                });
+            });
+        });
     </script>
 </html>
